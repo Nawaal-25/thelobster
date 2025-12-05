@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lobster</title>
+
+    <!--  Bootstrap CSS CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!--  Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="Logo1-removebg-preview CROPED.png" />
+    <link rel="stylesheet" href="style1.css" />
+    <!-- bs icon link -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    />
+ <?php
+$ProductPage = basename($_SERVER['PHP_SELF']);
+if ($ProductPage != 'MyDwag.php') {
+?>
+  <link rel="stylesheet" href="Products_Next_Page1.css">
+<?php
+}
+?>
+
+  </head>
+  <body>
+    <!--  Header for desktop ONLY-->
+    <nav
+      class="navbar navbar-expand-lg bg-dark navbar-dark sticky-top position-relative desktop-only"
+    >
+      <div class="container-fluid">
+        <!-- Logo -->
+        <a class="navbar-brand" href="#">
+          <img
+            src="Logo1-removebg-preview CROPED.png"
+            width="150"
+            alt="Logo"
+            class="img-fluid"
+          />
+        </a>
+
+        <!-- Nav links -->
+        <div class="collapse navbar-collapse justify-content-end">
+          <ul class="navbar-nav gap-3 p-3 rounded stack-on-mobile">
+            <li class="nav-item">
+              <a class="nav-link" href="index.php">Home</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="index.php">Shop All</a></li>
+            <li class="nav-item"><a class="nav-link" href="Top.php">Top</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="Bottom.php">Bottom</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Accessories.php">Accessories</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- header for Mobile and Tablet-->
+    <nav
+      class="d-block d-lg-none mobile-tablet-only navbar navbar-expand-lg bg-dark navbar-dark sticky-top position-relative desktop-only"
+    >
+      <div class="container-fluid">
+        <!-- Toggler -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Logo -->
+        <a class="navbar-brand" href="#">
+          <img
+            src="Logo1-removebg-preview CROPED.png"
+            style="margin-right: 11px"
+            width="100"
+            alt="Logo"
+            class="img-fluid"
+          />
+        </a>
+        <span>
+          <a href="javascript:void(0)" class="cart-icon">
+            <i
+              class="bi bi-cart4"
+              style="color: #ec3eb0; font-size: 24px; margin-right: 10px"
+            ></i>
+            <span
+              class="cartCount position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+              style="margin-top: 36px; margin-left: -19px; font-size: 10px"
+            >
+              0
+            </span>
+          </a>
+        </span>
+        <!-- Nav links -->
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+          style="margin-top: 26px"
+        >
+          <ul class="navbar-nav gap-3 p-3 rounded stack-on-mobile">
+            <li class="nav-item">
+              <a class="nav-link" href="index.php">Home</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="index.php">Shop All</a></li>
+            <li class="nav-item"><a class="nav-link" href="Top.php">Top</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="Bottom.php">Bottom</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Accessories.php">Accessories</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="UserLogin.html">
+                <i class="bi bi-person"></i> Account
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+    <div class="container my-lg-5 my-sm-3 animate-on-load">
+      <!-- wesite title row inside the hood -->
+      <div class="row my-4 fade-up">
+        <?php
+    $Slogan=basename($_SERVER['PHP_SELF']);
+    if($Slogan!= 'Bottom.php'&& $Slogan!= 'ContactUs.php' && $Slogan!= 'ShippingPolicy.php'&& $Slogan!= 'RefundPolicy.php'&& $Slogan!= 'PrivacyPolicy.php'&& $Slogan!= 'TermsOfService.php' && $Slogan!= 'MyDawg.php'){
+    ?>
+        <div>
+          <h1 class="mt-3 text-center text-white">*Inside the hood*</h1>
+          <p class="WebMessage mt-3 text-center">
+            No restock. Once it's gone, it's gone forever.
+          </p>
+        </div>
+        <?php
+}
+?>
+        <div class="HeaderIcon d-flex justify-content-end gap-3">
+          <a href="UserLogin.html">
+            <i class="bi bi-person d-none d-lg-inline"></i>
+          </a>
+          <a href="javascript:void(0)" class="cart-icon">
+            <i class="bi bi-cart4 d-none d-lg-inline"></i>
+            <span
+            
+              class="cartCount d-none d-lg-inline position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success"
+              style="margin-top: 13px; margin-left: -11px; font-size: 10px"
+            >
+            0  
+            </span>
+          </a>
+        </div>
+      </div>
+
+<!-- Cart Slider -->
+  <div id="cartOverlay" class="cart-overlay"></div>
+    <div id="cartSlider" class="cart-slider">
+      <div
+        class="cart-header my-4 mx-3 my-lg-4 mx-lg- d-flex align-items-center justify-content-between align-content-center"
+      >
+        <h5 class="mb-0">Your Cart</h5>
+        <button id="closeCart" class="btn btn-sm text-end mb-1">X</button>
+      </div>
+      <div id="cartItems" class="cart-items mt-3"></div>
+      <div class="cart-footer mx-lg-4 my-lg-3 mx-3 my-3 d-flex align-items-center justify-content-between align-content-center">
+        <p>Total: </p><span id="cartTotal" class="">₹0</span>
+      </div>
+      <button class="btn btn-dark  my-2 CheckOutCartBtn">Checkout</button>
+    </div>
